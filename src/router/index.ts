@@ -11,6 +11,16 @@ const routes: Array<RouteConfig> = [
     component: HomeView
   },
   {
+    path: '/room',
+    name: 'RoomView',
+    component: () => import('@/views/RoomView.vue')
+  },
+  {
+    path: '/admin',
+    name: 'AdminVieW',
+    component: () => import('@/views/AdminView.vue')
+  },
+  {
     path: '/about',
     name: 'about',
     // route level code-splitting

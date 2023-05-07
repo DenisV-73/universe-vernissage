@@ -1,32 +1,190 @@
 <template>
-  <div id="app">
-    <nav>
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
-    </nav>
-    <router-view/>
-  </div>
+  <v-app>
+    <v-app-bar app>
+      <v-btn class="font-weight-bold" large @click="toHome">
+        <v-img :width="32" src="@/assets/vernissage_logo.png"></v-img>
+        VERNISSAGE
+      </v-btn>
+
+
+      <v-spacer></v-spacer>
+
+      <v-btn text small class="ma-1">PRICING</v-btn>
+      <v-btn text small class="ma-1">HILFE</v-btn>
+      <v-btn text small class="ma-1" @click="showRegistrationDialog = true">REGISTRIEREN</v-btn>
+      <v-btn text small class="ma-1" @click="showLoginDialog = true">EINLOGGEN</v-btn>
+
+      <v-app-bar-nav-icon @click="switchDrawer"></v-app-bar-nav-icon>
+    </v-app-bar>
+
+    <v-main>
+      <v-navigation-drawer v-model="drawer" absolute temporary right>
+        <v-card>
+          <v-list id="menu_text" nav dense>
+            <v-icon>mdi-account-outline</v-icon>
+            <v-list-item-group>
+              <v-list-item v-for="(item, index) in logon_items" :key="index">
+                {{ item.title }}
+              </v-list-item>
+            </v-list-item-group>
+
+            <v-divider :thickness="6" color="error"></v-divider>
+
+            <v-list-item-group>
+              <v-list-item v-for="(item, index) in tools_items" :key="index">
+                {{ item.title }}
+              </v-list-item>
+            </v-list-item-group>
+
+            <v-divider :thickness="6" color="error"></v-divider>
+
+            <v-list-item-group>
+              <v-list-item v-for="(item, index) in explore_items" :key="index">
+                {{ item.title }}
+              </v-list-item>
+            </v-list-item-group>
+
+            <v-divider :thickness="6" color="error"></v-divider>
+
+            <v-list-item-group>
+              <v-list-item v-for="(item, index) in support_items" :key="index">
+                {{ item.title }}
+              </v-list-item>
+            </v-list-item-group>
+
+            <v-divider :thickness="6" color="error"></v-divider>
+
+            <v-list-item-group>
+              <v-list-item v-for="(item, index) in support_items" :key="index">
+                {{ item.title }}
+              </v-list-item>
+            </v-list-item-group>
+
+
+          </v-list>
+        </v-card>
+      </v-navigation-drawer>
+      <router-view />
+    </v-main>
+
+    <LoginComponent v-model="showLoginDialog" class="justify-center" />
+    <Registration v-model="showRegistrationDialog" class="justify-center" />
+
+  </v-app>
 </template>
 
+<script lang="ts">
+import Vue from "vue";
+import Component from 'vue-class-component';
+import router from './router';
+import LoginComponent from './components/login.vue';
+import Registration from './components/registration.vue';
+
+@Component({
+  components: {
+    LoginComponent,
+    Registration,
+  }
+})
+export default class App extends Vue {
+  drawer = false;
+  showLoginDialog = false;
+  showRegistrationDialog = false;
+
+  logon_items = [
+    {
+      title: 'Registrieren',
+      //LINK - Route To Registration
+    },
+    {
+      title: 'Einloggen',
+      //LINK - Route To Login
+    },
+  ];
+
+  tools_items = [
+    {
+      title: 'Depot',
+      //LINK - Route 
+    },
+    {
+      title: 'Spaces',
+      //LINK - Route
+    },
+    {
+      title: 'Office',
+      //LINK - Route
+    },
+    {
+      title: 'Augmented',
+      //LINK - Route 
+    },
+  ];
+
+  explore_items = [
+    {
+      title: 'Depot',
+      //LINK - Route 
+    },
+    {
+      title: 'Spaces',
+      //LINK - Route
+    },
+    {
+      title: 'Office',
+      //LINK - Route
+    },
+    {
+      title: 'Augmented',
+      //LINK - Route 
+    },
+  ];
+
+  support_items = [
+    {
+      title: 'Depot',
+      //LINK - Route 
+    },
+    {
+      title: 'Spaces',
+      //LINK - Route
+    },
+    {
+      title: 'Office',
+      //LINK - Route
+    },
+    {
+      title: 'Augmented',
+      //LINK - Route 
+    },
+  ];
+
+  switchDrawer() {
+    this.drawer = !this.drawer;
+  }
+
+  toHome() {
+    router.push({ name: 'home' });
+  }
+
+
+
+
+}
+</script>
+
 <style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
+.v-application {
+  font-family: Ysabeau !important;
 }
 
-nav {
-  padding: 30px;
+
+#logo-btn {
+  font-weight: black !important;
 }
 
-nav a {
-  font-weight: bold;
-  color: #2c3e50;
-}
-
-nav a.router-link-exact-active {
-  color: #42b983;
+#menu_text {
+  font-weight: bold !important;
+  font-size: 0.8em !important;
 }
 </style>
