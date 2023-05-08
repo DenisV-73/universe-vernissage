@@ -18,7 +18,7 @@
     </v-app-bar>
 
     <v-main>
-      <v-navigation-drawer v-model="drawer" absolute temporary right>
+      <v-navigation-drawer v-model="drawer" height="618" absolute temporary right hide-overlay>
         <v-card>
           <v-list id="menu_text" nav dense>
             <v-icon>mdi-account-outline</v-icon>
@@ -48,18 +48,18 @@
             <v-divider :thickness="6" color="error"></v-divider>
 
             <v-list-item-group>
-              <v-list-item v-for="(item, index) in support_items" :key="index">
+              <v-list-item v-for="(item, index) in support_items" :key="index" @click="toDsvgo">
                 {{ item.title }}
               </v-list-item>
             </v-list-item-group>
 
-            <v-divider :thickness="6" color="error"></v-divider>
+            <!-- <v-divider :thickness="6" color="error"></v-divider> -->
 
-            <v-list-item-group>
+            <!-- <v-list-item-group>
               <v-list-item v-for="(item, index) in support_items" :key="index">
                 {{ item.title }}
               </v-list-item>
-            </v-list-item-group>
+            </v-list-item-group> -->
 
 
           </v-list>
@@ -139,21 +139,18 @@ export default class App extends Vue {
 
   support_items = [
     {
-      title: 'Depot',
-      //LINK - Route 
+      title: 'DSVGO',
+
     },
     {
-      title: 'Spaces',
+      title: 'Impressum',
       //LINK - Route
     },
     {
-      title: 'Office',
+      title: 'Kontakt',
       //LINK - Route
     },
-    {
-      title: 'Augmented',
-      //LINK - Route 
-    },
+
   ];
 
   switchDrawer() {
@@ -162,6 +159,10 @@ export default class App extends Vue {
 
   toHome() {
     router.push({ name: 'home' });
+  }
+
+  toDsvgo() {
+    router.push({ name: 'dsvgo' });
   }
 
 

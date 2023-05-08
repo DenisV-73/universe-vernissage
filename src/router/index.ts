@@ -32,6 +32,11 @@ const routes: Array<RouteConfig> = [
     path: '/kunst',
     name: 'Kunst',
     component: () => import(/* webpackChunkName: "about" */ '../views/KunstView.vue')
+  },
+  {
+    path: '/dsvgo',
+    name: 'dsvgo',
+    component: () => import(/* webpackChunkName: "about" */ '../views/Dsvgo.vue')
   }
 ]
 
