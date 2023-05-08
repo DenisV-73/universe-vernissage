@@ -1,0 +1,7 @@
+#docker rm dockerize-vuejs-app -f
+#docker rm anasse-web -f
+
+docker build -t vuejs-cookbook/dockerize-vuejs-app .
+#
+docker run -d -it -p 8080:80 --rm --name dockerize-vuejs-app-1 vuejs-cookbook/dockerize-vuejs-app
+#
