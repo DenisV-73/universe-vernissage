@@ -16,20 +16,6 @@
 		</v-row>
 
 		<v-layout row wrap class="ma-auto mt-12">
-			<!-- <v-flex>
-				<v-card width="256" height="128">
-					<v-img src="@/assets/kunstwerke/Fotografien/-lifebuoy-help-ship-4k.jpg"></v-img>
-					<v-card-text>
-						Titel des Bildes
-					</v-card-text>
-				</v-card>
-			</v-flex> -->
-
-			<!-- <v-flex>
-				<v-card width="256" height="128">
-					<v-img src="@/assets/kunstwerke/Fotografien/bicyclist-bridge-bw-silhouette-night-4k.jpg"></v-img>
-				</v-card>
-			</v-flex> -->
 
 			<v-flex>
 				<v-card width="256" height="128" @click="openImage">
