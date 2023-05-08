@@ -39,7 +39,8 @@
             <v-divider :thickness="6" color="error"></v-divider>
 
             <v-list-item-group>
-              <v-list-item v-for="(item, index) in explore_items" :key="index">
+              <h4 class="text-center">Universe-Vernissage entdecken</h4>
+              <v-list-item v-for="(item, index) in explore_items" :key="index" @click="openCategory">
                 {{ item.title }}
               </v-list-item>
             </v-list-item-group>
@@ -123,20 +124,16 @@ export default class App extends Vue {
 
   explore_items = [
     {
-      title: 'Depot',
+      title: '3D Ausstellungen',
       //LINK - Route 
     },
     {
-      title: 'Spaces',
-      //LINK - Route
+      title: 'Kunst',
+      path: ''
     },
     {
-      title: 'Office',
+      title: 'Marketplace',
       //LINK - Route
-    },
-    {
-      title: 'Augmented',
-      //LINK - Route 
     },
   ];
 
@@ -168,7 +165,9 @@ export default class App extends Vue {
   }
 
 
-
+  openCategory() {
+    router.push({ name: 'Kunst' });
+  }
 
 }
 </script>

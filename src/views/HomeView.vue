@@ -97,6 +97,11 @@
 
     <CustomCarousel class="row-color" />
 
+    <v-row>
+      <MadeWith />
+    </v-row>
+
+
     <!-- <v-container>
       <iframe mozallowfullscreen="true" allow="autoplay; fullscreen" src="https://vernissage.netlify.app/"
         style="border: 3px, color: #7fffd4" name="Vernissage" scrolling="no" msallowfullscreen="true"

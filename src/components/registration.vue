@@ -49,8 +49,6 @@ export default class Registration extends Vue {
 	name = '';
 	vorname = '';
 
-
-
 	nameRules = [
 		(v: string) => !!v || 'Name benötigt!',
 		(v: string) => (v && v.length >= 3) || 'Name benötigt',
