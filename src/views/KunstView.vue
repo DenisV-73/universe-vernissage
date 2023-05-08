@@ -1,7 +1,7 @@
 <template>
 	<v-container fluid grid-list>
 		<h1 class="text-center">KUNSTWERKE</h1>
-
+		//TODO - Try to import the static images
 		<v-row>
 			<v-col cols="2" class="mb-6">
 				<v-text-field label="Titel" outlined></v-text-field>
