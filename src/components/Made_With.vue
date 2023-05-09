@@ -1,6 +1,6 @@
 <template>
 	<v-col>
-		<h1 class="text-center">#MADEWITH<b>KUNSTMATRIX</b></h1>
+		<h1 class="text-center">#MADEWITH<b>UNIVERSE-VERNISSAGE</b></h1>
 		<v-row>
 			<v-layout align-start justify-center fill-height>
 				<div>

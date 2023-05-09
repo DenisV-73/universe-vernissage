@@ -46,13 +46,13 @@ export default class LoginComponent extends Vue {
 	snackbar = false;
 	select = null;
 	name = '';
-
+	email = '';
 
 	nameRules = [
 		(v: string) => !!v || 'Name benötigt!',
 		(v: string) => (v && v.length >= 3) || 'Name benötigt',
 	];
-	email = '';
+
 	emailRules = [
 		(v: string) => !!v || 'E-mail benötigt!',
 		(v: string) => /.+@.+\..+/.test(v) || 'Keine gültige E-mail Adresse',

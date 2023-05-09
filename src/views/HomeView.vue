@@ -96,10 +96,10 @@
     </v-col>
 
     <CustomCarousel class="row-color" />
-
+    <!-- 
     <v-row>
       <MadeWith />
-    </v-row>
+    </v-row> -->
 
 
     <!-- <v-container>
