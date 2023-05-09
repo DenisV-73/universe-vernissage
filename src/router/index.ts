@@ -28,16 +28,21 @@ const routes: Array<RouteConfig> = [
     // which is lazy-loaded when the route is visited.
     component: () => import(/* webpackChunkName: "about" */ '../views/AboutView.vue')
   },
-  {
-    path: '/kunst',
-    name: 'Kunst',
-    component: () => import(/* webpackChunkName: "about" */ '../views/KunstView.vue')
-  },
+  // {
+  //   path: '/kunst',
+  //   name: 'Kunst',
+  //   component: () => import(/* webpackChunkName: "about" */ '../views/KunstView.vue')
+  // },
   {
     path: '/dsvgo',
     name: 'dsvgo',
     component: () => import(/* webpackChunkName: "about" */ '../views/Dsvgo.vue')
-  }
+  },
+  {
+    path: '/kunst_test',
+    name: 'KunstTest',
+    component: () => import(/* webpackChunkName: "about" */ '../views/KunstViewTest.vue')
+  },
 ]
 
 const router = new VueRouter({

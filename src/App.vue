@@ -48,7 +48,7 @@
             <v-divider :thickness="6" color="error"></v-divider>
 
             <v-list-item-group>
-              <v-list-item v-for="(item, index) in support_items" :key="index" @click="toDsvgo">
+              <v-list-item v-for=" (item, index)  in  support_items " :key="index" @click="toDsvgo">
                 {{ item.title }}
               </v-list-item>
             </v-list-item-group>
@@ -167,7 +167,7 @@ export default class App extends Vue {
 
 
   openCategory() {
-    router.push({ name: 'Kunst' });
+    router.push({ name: 'KunstTest' });
   }
 
 }
