@@ -3,7 +3,7 @@
 		<v-card>
 			<v-card-title>
 				<h3>About Happiness<br></h3>
-				<v-img src="@/assets/kunstwerke/Fotografien\ballerina-silhouette-dance-4k.jpg"></v-img>
+				<v-img src="@/assets/kunstwerke/Fotografien/ballerina-silhouette-dance-4k.jpg"></v-img>
 			</v-card-title>
 			<v-card-text>
 				<h1 class="text-center">Richard Dressler</h1>
